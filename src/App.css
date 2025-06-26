@@ -1,0 +1,184 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e1e;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #252526;
+  color: #d4d4d4;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  background-color: #333333;
+  color: #d4d4d4;
+  padding: 8px 12px;
+  border-bottom: 1px solid #3c3c3c;
+  font-size: 14px;
+}
+
+.file-tree {
+  padding: 8px;
+}
+
+.file-tree-node {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.file-tree-node:hover {
+  background-color: #37373d;
+}
+
+.node-icon {
+  margin-left: 4px;
+  margin-right: 8px;
+  color: #858585;
+}
+
+.node-name {
+  font-size: 13px;
+}
+
+.file-tree-children {
+  margin-left: 16px;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #858585;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.action-button:hover {
+  color: #d4d4d4;
+}
+
+.context-menu {
+  position: fixed;
+  background-color: #252526;
+  border: 1px solid #3c3c3c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 120px;
+}
+
+.context-menu-item {
+  padding: 8px 12px;
+  color: #d4d4d4;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.context-menu-item:hover {
+  background-color: #37373d;
+}
+
+.rename-input {
+  background-color: #3c3c3c;
+  border: 1px solid #858585;
+  color: #d4d4d4;
+  font-size: 13px;
+  padding: 2px 4px;
+  margin-left: 8px;
+  width: 150px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background-color: #252526;
+  border: 1px solid #3c3c3c;
+  padding: 16px;
+  border-radius: 4px;
+  width: 300px;
+  color: #d4d4d4;
+}
+
+.modal-title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.modal-field {
+  margin-bottom: 12px;
+}
+
+.modal-field label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.modal-input,
+.modal-select {
+  width: 100%;
+  background-color: #3c3c3c;
+  border: 1px solid #858585;
+  color: #d4d4d4;
+  padding: 4px;
+  font-size: 13px;
+  border-radius: 2px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.modal-button {
+  background-color: #007acc;
+  border: none;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.modal-button:hover {
+  background-color: #005f99;
+}
+
+.modal-button.cancel {
+  background-color: #3c3c3c;
+}
+
+.modal-button.cancel:hover {
+  background-color: #4a4a4a;
+}
